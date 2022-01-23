@@ -1,18 +1,17 @@
-from msilib.schema import Class
-from re import M
+
 from reportlab.pdfgen import canvas
 import os
 from reportlab.lib import colors
-from reportlab.lib.styles import ParagraphStyle,getSampleStyleSheet
+from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph , Frame , Table , TableStyle
 
 
-roll_no = 1
+
 school = 'ABC Public School'
 school_data = ['Affiliated to CBSE','Near Science Centre , Rajnagar , Raichok - 12',  ]
 
 
-def hello_world():
+def hello_world(roll_no):
     c = canvas.Canvas("{}.pdf".format(roll_no),bottomup=0)
     def drawSchoolData():
         c.setFont("Helvetica", 24)
@@ -109,7 +108,10 @@ def delete_file():
         pass
 
 delete_file()
-hello_world()
+hello_world(1)
+
+# for i in range(class_stregth):
+#     hello_world(i+1)
 
 
 
