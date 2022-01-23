@@ -9,8 +9,7 @@ from reportlab.platypus import Paragraph , Frame , Table , TableStyle
 
 roll_no = 1
 school = 'ABC Public School'
-school_data = ['Affiliated to CBSE',
-               'Near Science Centre , Rajnagar , Raichok - 12',  ]
+school_data = ['Affiliated to CBSE','Near Science Centre , Rajnagar , Raichok - 12',  ]
 
 
 def hello_world():
@@ -54,9 +53,7 @@ def hello_world():
             [promotion, class_teacher]
         ]
         table_data.reverse()
-        t_style = TableStyle([('BOX',(0,0),(-1,-1),2,colors.black),
-                              ('INNERGRID', (0,0), (-1,-1), 0.50, colors.indigo),
-                              ('VALIGN',(0,0),(-1,-1),'MIDDLE')])
+        t_style = TableStyle([('BOX',(0,0),(-1,-1),2,colors.black),('INNERGRID', (0,0), (-1,-1), 0.50, colors.indigo),('VALIGN',(0,0),(-1,-1),'MIDDLE')])
         table = Table(table_data, colWidths=[255, 255] , rowHeights=[50,50,50] ,  style=t_style)
         story = [table]
         f2 = Frame(20, 125, 550, 175, leftPadding=1, bottomPadding=2, rightPadding=1, topPadding=2,showBoundary=0)
